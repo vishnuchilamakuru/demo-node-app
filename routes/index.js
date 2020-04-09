@@ -38,6 +38,7 @@ router.post('/', [
             data: req.data
         });
     }
+    
 });
 
 router.get('/registrations', basic.check((req, res) => {
