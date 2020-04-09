@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+    if registration
+        table.listing-table.table-dark.table-striped
+            tr
+             th ID
+             td= registration._id        
+            tr
+             th Name
+             td= registration.name
+            tr
+             th Email
+             td= registration.email
+
+    else
+        p No Registration Found :(

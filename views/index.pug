@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    if registrations.length
+        table.listing-table.table-dark.table-striped
+            tr
+              th Name
+              th Email
+              th Actions
+            each registration in registrations
+              tr
+                td= registration.name
+                td= registration.email
+                td
+                    a(href="/registrations/"+ registration._id) #{registration._id}
+    else
+        p No Registrations Yet :(
